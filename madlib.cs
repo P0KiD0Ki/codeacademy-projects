@@ -77,7 +77,8 @@ namespace MadLibs
 
 
       // Print the story:
-Console.WriteLine(story);
+      Console.WriteLine(story);
+      
     }
   }
 }
