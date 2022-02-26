@@ -68,7 +68,12 @@ namespace MadLibs
       string year = Console.ReadLine();
 
       string story = $"This morning {name} woke up feeling {adjective}. 
-                    'It is going to be a {adjective2} day!' Outside, a bunch of {animal}s were protesting to keep {food} in stores. They began to {verb} to the rhythm of the {noun}, which made all the {fruit}s very {adjective3}. Concerned, {name} texted {hero}, who flew {name} to {country} and dropped {name} in a puddle of frozen {dessert}. {name} woke up in the year {year}, in a world where {noun2}s ruled the world.";
+                    "It is going to be a {adjective2} day!\" Outside, a bunch of 
+                    {animal}s were protesting to keep {food} in stores. They began 
+                    to {verb} to the rhythm of the {noun}, which made all the {fruit}s 
+                    very {adjective3}. Concerned, {name} texted {hero}, who flew {name} 
+                    to {country} and dropped {name} in a puddle of frozen {dessert}. {name} 
+                    woke up in the year {year}, in a world where {noun2}s ruled the world.\";
 
 
       // Print the story:
