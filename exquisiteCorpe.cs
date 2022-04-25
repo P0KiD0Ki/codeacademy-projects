@@ -6,9 +6,72 @@ namespace ExquisiteCorpse
   {
     static void Main(string[] args)
     {
-      BuildACreature("bug", "monster", "ghost");
+      //BuildACreature("bug", "monster", "ghost");
+      //SwitchCase(1, 1, 1);
+      RandomMode();
     }
 
+    static void RandomMode()
+    {
+      Random randomNumber = new Random();
+      int head = randomNumber.Next(1, 4);
+      int body = randomNumber.Next(1, 4);
+      int feet = randomNumber.Next(1, 4);
+
+      SwitchCase(head, body, feet);
+    }
+    
+    static void SwitchCase(int head, int body, int feet)
+    {
+      switch (head)
+      {
+        case 1:
+          GhostHead();
+          break;
+        case 2:
+          BugHead();
+          break;
+        case 3:
+          MonsterHead();
+          break;
+        default:
+          Console.WriteLine("");
+          break;
+      }
+
+      switch (body)
+      {
+        case 1:
+          GhostBody();
+          break;
+        case 2:
+          BugBody();
+          break;
+        case 3:
+          MonsterBody();
+          break;
+        default:
+          Console.WriteLine("");
+          break;
+      }
+
+      switch (feet)
+      {
+        case 1:
+          GhostFeet();
+          break;
+        case 2:
+          BugFeet();
+          break;
+        case 3:
+          MonsterFeet();
+          break;
+        default:
+          Console.WriteLine("");
+          break;
+      }
+    }
+    
     static void BuildACreature(string head, string body, string feet)
     {
 
