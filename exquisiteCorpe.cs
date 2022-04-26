@@ -6,8 +6,6 @@ namespace ExquisiteCorpse
   {
     static void Main(string[] args)
     {
-      //BuildACreature("bug", "monster", "ghost");
-      //SwitchCase(1, 1, 1);
       RandomMode();
     }
 
@@ -21,9 +19,9 @@ namespace ExquisiteCorpse
       SwitchCase(head, body, feet);
     }
     
-    static void SwitchCase(int head, int body, int feet)
+    static void SwitchCase(int headNumber, int bodyNumber, int feetNumber)
     {
-      switch (head)
+      switch (headNumber)
       {
         case 1:
           GhostHead();
@@ -39,7 +37,7 @@ namespace ExquisiteCorpse
           break;
       }
 
-      switch (body)
+      switch (bodyNumber)
       {
         case 1:
           GhostBody();
@@ -55,7 +53,7 @@ namespace ExquisiteCorpse
           break;
       }
 
-      switch (feet)
+      switch (feetNumber)
       {
         case 1:
           GhostFeet();
@@ -71,58 +69,31 @@ namespace ExquisiteCorpse
           break;
       }
     }
+
+    static int TranslateToNumber(string creature)
+    {
+      switch (creature)
+      {
+        case "ghost":
+          return 1;
+          break;
+        case "bug":
+          return 2;
+          break;
+        case "monster":
+          return 3;
+          break;
+        default:
+          return 1;
+          break;
+      }
+    }
     
     static void BuildACreature(string head, string body, string feet)
     {
-
-      switch (head)
-        {
-        case "ghost":
-          GhostHead();
-          break;
-        case "bug":
-          BugHead();
-          break;
-        case "monster":
-          MonsterHead();
-          break;
-        default:
-          Console.WriteLine("");
-          break;
-        }
-
-        switch (body)
-          {
-          case "ghost":
-            GhostBody();
-            break;
-          case "bug":
-            BugBody();
-            break;
-          case "monster":
-            MonsterBody();
-            break;
-          default:
-            Console.WriteLine("");
-            break;
-          }
-
-        switch (feet)
-          {
-          case "ghost":
-            GhostFeet();
-            break;
-          case "bug":
-            BugFeet();
-            break;
-          case "monster":
-            MonsterFeet();
-            break;
-          default:
-            Console.WriteLine("");
-            break;
-          }
-
+      int headNumber = TranslateToNumber("head");
+      int bodyNumber = TranslateToNumber("body");
+      int feetNumber = TranslateToNumber("feet");
     }
 
     static void GhostHead()
